@@ -1,6 +1,7 @@
 package br.com.fiap.entity;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "T_EX10_PESSOA")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="ds_tipo_pessoa") //Nome da tabela que diferencia o tipo
+
 @SequenceGenerator(name = "seqPessoa", sequenceName = "SQ_PESSOA", allocationSize = 1)
 public class Pessoa {
 	@Id
