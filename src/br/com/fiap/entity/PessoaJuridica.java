@@ -3,9 +3,11 @@ package br.com.fiap.entity;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue("PJ")
+@Table(name="T_EX10_PESSOA_JURIDICA")
+//@DiscriminatorValue("PJ")
 public class PessoaJuridica extends Pessoa{
 
 	@Column(name="nr_cnpj")
